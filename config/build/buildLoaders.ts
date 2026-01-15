@@ -1,5 +1,5 @@
 import webpack from "webpack";
-import MiniCssExtractPlugin, { loader } from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
@@ -15,6 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
             localIdentName: isDev
               ? "[path][name]__[local]--[hash:base64:5]"
               : "[hash:base64:8]",
+            namedExport: false,
           },
         },
       },
