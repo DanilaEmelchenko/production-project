@@ -39,8 +39,12 @@ export default defineConfig([
       "@typescript-eslint/no-unused-expressions": "off",
       "i18next/no-literal-string": "error",
     },
-    globals: {
-      __IS_DEV__: true,
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        __IS_DEV__: true,
+      },
     },
   },
 ]);
