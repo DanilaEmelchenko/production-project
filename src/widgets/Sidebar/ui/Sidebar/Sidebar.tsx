@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { classnames } from "shared/lib/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Sidebar.module.scss";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 import LangSwitcher from "shared/ui/LangSwitcher/LangSwitcher";
@@ -17,7 +17,7 @@ const Sidebar = ({ className }: SidebarProps) => {
 
   return (
     <div
-      className={classnames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
         className,
       ])}
     >
