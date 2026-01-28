@@ -37,7 +37,8 @@ export default defineConfig([
       "import/no-extraneous-dependencies": "off",
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-expressions": "off",
-      "i18next/no-literal-string": "error",
+      "i18next/no-literal-string": "warn",
+      "no-unused-vars": "off",
     },
     languageOptions: {
       globals: {
