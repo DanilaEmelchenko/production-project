@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -38,7 +41,7 @@ export default defineConfig([
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-expressions": "off",
       "i18next/no-literal-string": "warn",
-      "no-unused-vars": "off",
+      " react/display-name": "off",
     },
     languageOptions: {
       globals: {
@@ -48,4 +51,5 @@ export default defineConfig([
       },
     },
   },
+  ...storybook.configs["flat/recommended"],
 ]);
