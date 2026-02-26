@@ -4,5 +4,6 @@ export default {
   rules: {
     "selector-class-pattern": null,
     "selector-id-pattern": null,
+    "number-max-precision": null,
   },
 };
