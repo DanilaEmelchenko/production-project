@@ -9,7 +9,6 @@ import i18next from "eslint-plugin-i18next";
 
 export default defineConfig([
   {
-    ignores: ["**/build/**", "**/node_modules/**"],
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     plugins: { js },
     extends: ["js/recommended"],
