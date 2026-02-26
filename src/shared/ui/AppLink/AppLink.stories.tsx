@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
-import { fn } from "storybook/test";
-
 import AppLink, { AppLinkTheme } from "./AppLink";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
@@ -11,10 +9,6 @@ const meta = {
   component: AppLink,
   parameters: {},
   tags: ["autodocs"],
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
-  args: { onClick: fn() },
 } satisfies Meta<typeof AppLink>;
 
 export default meta;
@@ -22,6 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    to: "/",
     children: "Text",
     theme: AppLinkTheme.PRIMARY,
   },
@@ -29,6 +24,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
+    to: "/",
     children: "Text",
     theme: AppLinkTheme.SECONDARY,
   },
@@ -37,6 +33,7 @@ export const Secondary: Story = {
 export const PrimaryDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
   args: {
+    to: "/",
     children: "Text",
     theme: AppLinkTheme.PRIMARY,
   },
@@ -45,6 +42,7 @@ export const PrimaryDark: Story = {
 export const SecondaryDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
   args: {
+    to: "/",
     children: "Text",
     theme: AppLinkTheme.SECONDARY,
   },

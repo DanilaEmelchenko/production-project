@@ -11,10 +11,6 @@ const meta = {
   component: PageError,
   parameters: {},
   tags: ["autodocs"],
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
-  args: { onClick: fn() },
 } satisfies Meta<typeof PageError>;
 
 export default meta;

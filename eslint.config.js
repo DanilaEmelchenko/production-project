@@ -41,7 +41,7 @@ export default defineConfig([
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-expressions": "off",
       "i18next/no-literal-string": "warn",
-      " react/display-name": "off",
+      "react/display-name": "off",
     },
     languageOptions: {
       globals: {

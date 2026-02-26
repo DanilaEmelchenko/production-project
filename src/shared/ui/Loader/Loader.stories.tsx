@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
-import { fn } from "storybook/test";
-
 import Loader from "./Loader";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
@@ -11,10 +9,6 @@ const meta = {
   component: Loader,
   parameters: {},
   tags: ["autodocs"],
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
-  args: { onClick: fn() },
 } satisfies Meta<typeof Loader>;
 
 export default meta;
