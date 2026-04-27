@@ -49,6 +49,7 @@ export default defineConfig([
       "@typescript-eslint/no-unused-expressions": "off",
       "i18next/no-literal-string": "warn",
       "react/display-name": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
     },
     languageOptions: {
       globals: {
