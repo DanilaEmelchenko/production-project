@@ -7,6 +7,5 @@ export default {
     "number-max-precision": null,
     "color-function-alias-notation": null,
     "declaration-block-no-redundant-longhand-properties": null,
-    "no-rules-configured": null,
   },
 };
