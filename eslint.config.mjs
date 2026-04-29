@@ -1,11 +1,11 @@
 import storybook from "eslint-plugin-storybook";
-
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import { defineConfig } from "eslint/config";
 import i18next from "eslint-plugin-i18next";
+import reactHooks from "eslint-plugin-react-hooks";
 
 export default defineConfig([
   {
@@ -20,6 +20,7 @@ export default defineConfig([
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   i18next.configs["flat/recommended"],
+  reactHooks.configs.flat.recommended,
   {
     settings: {
       react: {
@@ -50,6 +51,9 @@ export default defineConfig([
       "i18next/no-literal-string": "warn",
       "react/display-name": "off",
       "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error",
+      "react/jsx-props-no-spreading": "off",
     },
     languageOptions: {
       globals: {
