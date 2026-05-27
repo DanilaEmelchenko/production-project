@@ -9,7 +9,13 @@ import reactHooks from "eslint-plugin-react-hooks";
 
 export default defineConfig([
   {
-    ignores: ["**/build/**", "**/node_modules/**"],
+    ignores: [
+      "**/build/**",
+      "**/node_modules/**",
+      "**/storybook-static/**",
+      "**/test-results/**",
+      "**/playwright-report/**",
+    ],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
